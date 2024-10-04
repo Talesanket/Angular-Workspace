@@ -1,0 +1,140 @@
+ /* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #e9ecef; /* Light gray background */
+  margin: 0;
+  padding: 20px;
+  color: #333; /* Default text color */
+}
+
+/* Header styles */
+.header {
+  text-align: center;
+  font-size: 2rem;
+  color: #007bff; /* Primary blue color */
+  margin-bottom: 20px;
+}
+
+.sub-header {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #495057; /* Darker gray for subheader */
+  margin-top: 10px;
+}
+
+/* Form container styles */
+.form-container {
+  background: #ffffff; /* White background for the form */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Individual form group styles */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Styles for input fields and dropdowns */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: 1px solid #ced4da; /* Light border color */
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none;
+}
+
+/* Specific styles for name and city input fields */
+input[type="text"] {
+  height: 45px; /* Increased height for better accessibility */
+  font-size: 16px; /* Font size for better readability */
+}
+
+/* Styles for date of birth input */
+input[type="date"] {
+  height: 45px; /* Match the height */
+}
+
+/* Button styles */
+.add-button {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s; /* Button transition */
+}
+
+.add-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Table styles */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.student-table th,
+.student-table td {
+  border: 1px solid #dee2e6; /* Light gray border */
+  padding: 12px; /* Increased padding */
+  text-align: left;
+}
+
+.student-table th {
+  background-color: #007bff; /* Table header color */
+  color: white;
+  font-weight: bold;
+}
+
+.student-table tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light background for even rows */
+}
+
+.student-table tr:hover {
+  background-color: #e2e6ea; /* Darker background on row hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.student-table td {
+  color: #343a40; /* Dark text color */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .form-container {
+    width: 90%; /* Full width on small screens */
+    margin: auto; /* Centered */
+  }
+
+  .header {
+    font-size: 1.5rem; /* Smaller font for header */
+  }
+
+  .sub-header {
+    font-size: 1.2rem; /* Smaller font for subheader */
+  }
+
+  .add-button {
+    width: 100%; /* Full width button on small screens */
+  }
+}

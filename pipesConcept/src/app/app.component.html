@@ -1,0 +1,101 @@
+<h2>Angular Built-in Pipes Example</h2>
+
+<!-- 1. DatePipe -->
+<p><strong>Date (fullDate):</strong> {{ today | date:'fullDate' }}</p>
+<p><strong>Date (shortDate):</strong> {{ today | date:'shortDate' }}</p>
+<p><strong>Date (custom format):</strong> {{ today | date:'dd-MM-yyyy HH:mm:ss' }}</p>
+
+<!-- 2. UpperCasePipe and LowerCasePipe -->
+<p><strong>Text (uppercase):</strong> {{ text | uppercase }}</p>
+<p><strong>Text (lowercase):</strong> {{ text | lowercase }}</p>
+
+<!-- 3. TitleCasePipe -->
+<p><strong>Text (titlecase):</strong> {{ text | titlecase }}</p>
+
+<!-- 4. CurrencyPipe -->
+<p><strong>Price (USD):</strong> {{ price | currency:'USD' }}</p>
+<p><strong>Price (INR with narrow symbol):</strong> {{ price | currency:'INR':'symbol-narrow' }}</p>
+
+<!-- 5. PercentPipe -->
+<p><strong>Percentage:</strong> {{ percentValue | percent }}</p>
+<p><strong>Percentage (1 decimal point):</strong> {{ percentValue | percent:'1.1-1' }}</p>
+
+<!-- 6. DecimalPipe -->
+<p><strong>Number (2 decimal places):</strong> {{ price | number:'1.2-2' }}</p>
+
+<!-- 7. SlicePipe -->
+<p><strong>Array slice (index 2 to 4):</strong> {{ numbersArray | slice:2:4 }}</p>
+<p><strong>Text slice (0 to 6):</strong> {{ text | slice:0:6 }}</p>
+
+<!-- 8. JsonPipe -->
+<p><strong>Object (JSON format):</strong> {{ jsonObject | json }}</p>
+
+<!-- 9. KeyValuePipe -->
+<ul>
+  <strong>KeyValue Pipe:</strong>
+  <li *ngFor="let item of jsonObject | keyvalue">
+    {{item.key}}: {{item.value}}
+  </li>
+</ul>
+
+<h2>i18nSelect Pipe Example</h2>
+
+<p>Hello, {{ gender | i18nSelect: genderMap }}!</p>
+
+<button (click)="changeGender('male')">Set Male</button>
+<button (click)="changeGender('female')">Set Female</button>
+<button (click)="changeGender('other')">Set Other</button>
+<button (click)="changeGender('unknown')">Set Unknown</button>
+
+<h2>Student Information</h2>
+
+<!-- Form to input student information -->
+<div>
+  <label>Name:</label>
+  <input [(ngModel)]="studentName" placeholder="Enter name" />
+
+  <label>Age:</label>
+  <input type="number" [(ngModel)]="studentAge" placeholder="Enter age" />
+
+  <label>Date of Birth:</label>
+  <input type="date" [(ngModel)]="studentDob" />
+
+  <label>City:</label>
+  <input [(ngModel)]="studentCity" placeholder="Enter city" />
+
+  <!-- New Gender Dropdown -->
+  <label>Gender:</label>
+  <select [(ngModel)]="studentGender">
+    <option value="" disabled>Select gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+
+  <!-- New Batch Number Input -->
+  <label>Batch Number:</label>
+  <input type="number" [(ngModel)]="studentBatchNo" placeholder="Enter batch number" />
+
+  <button (click)="addStudent()">Add Student</button>
+</div>
+
+<!-- Display list of students -->
+<h3>List of Students</h3>
+<table border="1" cellpadding="10">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Date of Birth</th>
+    <th>City</th>
+    <th>Gender</th>
+    <th>Batch Number</th>
+  </tr>
+  <tr *ngFor="let student of students">
+    <td>{{ student.name }}</td>
+    <td>{{ student.age }}</td>
+    <td>{{ student.dob | date: 'MMM d, y' }}</td>
+    <td>{{ student.city }}</td>
+    <td>{{ student.gender }}</td>
+    <td>{{ student.batchNo }}</td>
+  </tr>
+</table>

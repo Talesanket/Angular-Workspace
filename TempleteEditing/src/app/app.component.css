@@ -1,0 +1,51 @@
+ /* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Make box model more intuitive */
+}
+
+/* Set a height for the entire application */
+html, body {
+  height: 100%; /* Ensure body takes full height */
+}
+
+/* Main application container styles */
+.app-container {
+  display: flex;
+  flex-direction: column; /* Arrange children in a column */
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Add space at the top of the content */
+.content {
+  flex: 1; /* Allow content to grow and fill available space */
+  padding: 20px; /* Padding around the content */
+  background-color: #f8f9fa; /* Light background for content area */
+}
+
+/* Home container styles */
+.home-container {
+  text-align: center; /* Center the text and image */
+  padding: 20px; /* Add padding around the container */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Image styles */
+.home-image {
+  max-width: 100%; /* Make sure the image doesn't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+  margin-top: 20px; /* Space above the image */
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .home-image {
+    max-width: 90%; /* Slightly smaller max-width on mobile */
+  }
+
+  .home-container {
+    padding: 10px; /* Less padding on mobile */
+  }
+}

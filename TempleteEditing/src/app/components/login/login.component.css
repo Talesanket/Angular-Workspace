@@ -1,0 +1,69 @@
+/* Ensure the body takes full height and has a nice background color */
+body {
+  height: 100vh; /* Full height */
+  margin: 0; /* Remove default margin */
+  background-color: #f8f9fa; /* Light background color */
+}
+
+/* Main container styles */
+.vh-100 {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+}
+
+/* Style for the custom container */
+.h-custom {
+  height: 100%; /* Full height for the custom container */
+}
+
+/* Style the login container */
+.login-container {
+  max-width: 500px; /* Maximum width for the container */
+  background-color: white; /* White background for the form */
+  padding: 2rem; /* Padding around the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+/* Style for the image */
+.img-fluid {
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+/* Divider style */
+.divider {
+  margin: 2rem 0; /* Space around the divider */
+}
+
+/* Button styling */
+.btn-primary {
+  background-color: #007bff; /* Primary color */
+  border-color: #007bff; /* Border color */
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+  border-color: #0056b3; /* Darker border on hover */
+}
+
+/* Link styles */
+.link-danger {
+  color: #dc3545; /* Danger color for links */
+}
+
+.link-danger:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Styles for small text */
+.small {
+  font-size: 0.875rem; /* Small text size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1rem; /* Less padding on smaller screens */
+  }
+}

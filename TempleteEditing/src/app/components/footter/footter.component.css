@@ -1,0 +1,17 @@
+footer {
+  position: relative; /* Allow footer to sit at the bottom */
+  width: 100%; /* Full width */
+}
+
+/* Social media icons */
+footer .fab {
+  font-size: 1.5rem; /* Size of social media icons */
+}
+
+footer .text-white {
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+footer .text-white:hover {
+  color: #ffc107; /* Change color on hover */
+}
